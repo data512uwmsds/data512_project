@@ -9,7 +9,7 @@ The source data and example code for this dataset is licensed under:
 
 ## Data Sources
 ### Raw data
-1. Wildland Fires Dataset
+1. **Wildland Fires Dataset**   
 This analysis uses the [USGS_Wildland_Fire_Combined_Dataset.json](https://www.sciencebase.gov/catalog/item/61aa537dd34eb622f699df81) dataset from the United States Geological Survey (USGS),
 which consolidates multiple records of wildland fire occurences across the U.S. and its territories, spanning from the 1800s to the present. 
 The schema:
@@ -20,7 +20,7 @@ The schema:
     - `fields`
     - `features`
 
-2. AQI Data
+2. **AQI Data**     
 This analysis obtains the [Air Quality Service (AQS) API](https://aqs.epa.gov/aqsweb/documents/data_api.html) from the US Environmental Protection Agency (EPA). The data obtained through the monitoring stations in Salt Lake County. The data collection requests data related to gaseous (CO, SO2, NO2, and O2) & particulate data (PM10, PM2.5, and acceptable PM2.5).
 
 
