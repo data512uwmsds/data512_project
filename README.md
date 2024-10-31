@@ -4,9 +4,8 @@
 The goal of this project is to analyze the impact of widespread wildland fires in West Valley City, UT. The project aims to inform policy makers, city managers, city councils, and other civic institutions, to mitigate future impacts from wildfires.
 
 ## License
-The source data for this dataset is licensed under:
+The source data and example code for this dataset is licensed under:
 - [Creative Commons Attribution-ShareAlike 3.0 (CC-BY-SA 3.0)](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
-- MIT License
 
 ## Data Sources
 ### Raw data
