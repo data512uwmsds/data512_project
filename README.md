@@ -45,8 +45,6 @@ The `data/figure` folder contains the following figures used in the report:
 
 These figures provide visual insights into the data analysis conducted in the project.
 
-
-
 ### Intermediate Data
 Find intermediate data [here](https://drive.google.com/drive/folders/1y2Y7d4Ub1OpWUXfFkIDTmYiJFBVUp7zg?usp=sharing).
 - `fire_distance_data.csv`: contains distance calculations between fires and West Valley, UT.
@@ -62,3 +60,7 @@ Find intermediate data [here](https://drive.google.com/drive/folders/1y2Y7d4Ub1O
 - `part_1_aqi.ipynb`: code for querying and analyzing AQI data for the city.
 - `part_1_visual.ipynb`:  code for generating visualizations of the fire and AQI data.
 - `part_2`: code for transforming IHME data and building regression between smoke, fire, AQI data and IHME data.
+
+## Final Report
+The final report consolidates the findings from the analysis of wildland fires, air quality, and health impacts in West Valley City, UT. It includes detailed descriptions of the data sources, methodologies, and results. 
+The report is stored as `data/output/Project Report.pdf`.
