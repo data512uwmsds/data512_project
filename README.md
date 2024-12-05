@@ -23,6 +23,29 @@ The schema:
 2. **AQI Data**     
 This analysis obtains the [Air Quality Service (AQS) API](https://aqs.epa.gov/aqsweb/documents/data_api.html) from the US Environmental Protection Agency (EPA). The data obtained through the monitoring stations in Salt Lake County. The data collection requests data related to gaseous (CO, SO2, NO2, and O2) & particulate data (PM10, PM2.5, and acceptable PM2.5).
 
+3. **IHME Data**
+This analysis also obtain data from [Global Burden of Disease Study](https://vizhub.healthdata.org/gbd-results/) from the Institute for Health Metrics and Evaluation (IHME). The Global Burden of Disease Study provides estimates of the burden of diseases, injuries, and risk factors. It includes data on mortality, morbidity, and risk factors for various diseases and injuries. It is stratified by age, sex, and geography, allowing for detailed analysis of health trends and disparities. The dataset is used to understand the health impacts of wildland fires on the population of West Valley City, UT, by correlating health outcomes with smoke and air quality data. The data, however, is at state-level and not on the same county level as AQI data. I minimize access to sensitive healthcare data by querying only the data related respiratory illnesses and risk causes related to air pollution.
+Data is stored as `data/IHME-GBD_2021_DATA-Utah.csv`.
+Significant columns from this dataset used in the analysis:
+- `cause_name`: Name of the disease or injury.
+- `metric_name`: Metric (e.g., deaths, DALYs) used for the `val`, `upper`, and `lower` columns.
+- `val`: Value of the metric.
+- `upper`: Upper bound of the confidence interval.
+- `lower`: Lower bound of the confidence interval.
+- `year`: Year of the data.
+
+### Output 
+The `data/figure` folder contains the following figures used in the report:
+1. `fires_histogram.png`: A histogram showing the distribution of wildland fires over the years in West Valley City, UT.
+2. `annual_acres_burned.png`: A line chart depicting the annual acres burned by wildland fires in West Valley City, UT within 650 miles.
+3. `smoke_gas_particulate.png`: A multi-line chart illustrating the levels of gaseous and particulate pollutants over time in West Valley City, UT.
+4. `acres_burned_cumulative_smoke.png`: A multi-line chart showing the relationship between cumulative smoke estimates and acres burned by wildland fires.
+5. `utah_data_dist.png`: A bar chart of various health metrics distribution related to respiratory illnesses in Utah from IHME data.
+6. `death_by_illnesses.png`: A line chart representing the number of deaths by different respiratory illnesses with shaded confidence interval in Utah.
+
+These figures provide visual insights into the data analysis conducted in the project.
+
+
 
 ### Intermediate Data
 Find intermediate data [here](https://drive.google.com/drive/folders/1y2Y7d4Ub1OpWUXfFkIDTmYiJFBVUp7zg?usp=sharing).
@@ -35,7 +58,7 @@ Find intermediate data [here](https://drive.google.com/drive/folders/1y2Y7d4Ub1O
 - `part_df_filtered.csv`: filtered data for particulate pollutants to non-null values and only columns of interest.
 
 ### Code
-#### Part 1 Common Analysis
-- `part_1_distance.ipynb`: code for calculating fire distances from the city and predictive model.
+- `part_1_smoke.ipynb`: code for calculating fire distances from the city and predictive model.
 - `part_1_aqi.ipynb`: code for querying and analyzing AQI data for the city.
 - `part_1_visual.ipynb`:  code for generating visualizations of the fire and AQI data.
+- `part_2`: code for transforming IHME data and building regression between smoke, fire, AQI data and IHME data.
